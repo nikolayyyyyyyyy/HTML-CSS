@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <style>
+        .flex-container {
+            width: 160px;
+            border: 2px solid black;
+            display: flex;
+            padding: 10px;
+        }
+
+        .flex-item {
+            padding: 10px;
+            border: 2px solid black;
+            background: gray;
+        }
+
+        .flex-container.custom-order .flex-item:nth-child(1) {
+            order: 3;
+        }
+
+        .flex-container.custom-order .flex-item:nth-child(2) {
+            order: 5;
+        }
+
+        .flex-container.custom-order .flex-item:nth-child(3) {
+            order: 2;
+        }
+
+        .flex-container.custom-order .flex-item:nth-child(4) {
+            order: 1;
+        }
+
+        .flex-container.custom-order .flex-item:nth-child(5) {
+            order: 4;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Order</h1>
+
+    <h2>default order</h2>
+    <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+    </div>
+
+    <h2>custom order</h2>
+    <div class="flex-container custom-order">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+    </div>
+</body>
+
+</html>

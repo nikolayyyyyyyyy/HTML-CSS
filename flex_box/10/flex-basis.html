@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <style>
+        .flex-container {
+            width: 300px;
+            border: 2px solid black;
+            display: flex;
+            padding: 10px;
+        }
+
+        .flex-item {
+            padding: 10px;
+            border: 2px solid black;
+            background: gray;
+        }
+
+        .flex-container.flex-grow-one .flex-item {
+            flex-grow: 1;
+        }
+
+        .flex-container.flex-shrink-zero .flex-item {
+            flex-shrink: 0;
+        }
+
+        .flex-container.flex-basis-5em .flex-item {
+            flex-basis: 5em;
+            width: auto;
+        }
+
+        .flex-container.flex-basis-5em.flex-container.flex-grow-one {
+            width: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>flex-basis</h1>
+
+    <h2>flex-basis: 5em;</h2>
+    <div class="flex-container flex-basis-5em">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+        <div class="flex-item">6</div>
+    </div>
+
+
+    <h2>flex-basis: 5em; flex-shrink: 0; (max-width: 5em)</h2>
+    <div class="flex-container flex-basis-5em flex-shrink-zero">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+        <div class="flex-item">6</div>
+    </div>
+
+
+    <h2>flex-basis: 5em; flex-grow: 1; (min-width: 5em)</h2>
+    <div class="flex-container flex-basis-5em flex-grow-one">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+        <div class="flex-item">6</div>
+    </div>
+</body>
+
+</html>
